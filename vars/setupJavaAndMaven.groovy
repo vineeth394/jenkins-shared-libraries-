@@ -3,10 +3,10 @@
 def call() {
     echo "Setting up Java and Maven..."
 
-    // Install OpenJDK 11
+    // Install OpenJDK 17
     sh '''
     sudo apt update
-    sudo apt install -y openjdk-11-jdk
+    sudo apt install -y openjdk-17-jdk
     java -version
     '''
     
