@@ -40,6 +40,16 @@ pipeline {
             }
         }
 
+        stage('Tag Git Commit') {
+            steps {
+                // Tag the current commit with a version tag (for example, "v1.0.0")
+                script {
+                    def tagName = "v1.0.0"
+                    gitTagging(tagName)
+                }
+            }
+        }
+
         stage('Validate App') {
             steps {
                 // Validate if the app is running
