@@ -13,5 +13,5 @@ def call() {
     sh 'mvn clean package'
     
     echo 'Uploading artifact...'
-    archiveArtifacts artifacts: artifactPath, allowEmptyArchive: true
+    archiveArtifacts artifacts: 'target/*.jar', allowEmptyArchive: true
 }
